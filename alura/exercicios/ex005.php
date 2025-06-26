@@ -1,0 +1,1 @@
+5 - Escreva um programa em PHP que converta uma temperatura de Celsius para Fahrenheit.

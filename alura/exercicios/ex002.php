@@ -1,0 +1,1 @@
+2 - Crie um programa em PHP que calcule a média de três notas e exiba o resultado.
