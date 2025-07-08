@@ -44,8 +44,13 @@ $genero = match ($nomeFilme) {
     default => "desconhecido"
 };
 
-echo "O genero do filme e $genero\n"
+echo "O genero do filme e $genero\n";
 
-
+$filme = [
+    "Thor: Ragnarok",
+    2021,
+    7.8,
+    "super-heroi"
+]
 
 ?>
