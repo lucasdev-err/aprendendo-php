@@ -6,11 +6,12 @@ $nomeFilme = "Top Gun - Maverick";
 $anoLancamento = 2022;
 
 $quantidadeDeNotas = $argc - 1;
-$somaDeNotas = 0;
+$notas = [];
 
-for ($i=1; $i <= $quantidadeDeNotas; $i++) { 
-    $somaDeNotas += $argv[$i];
+for ($i = 1; $i <= $quantidadeDeNotas; $i++) { 
+    $notas[] = (float) $argv[$i];
 }
+
 
 /* 
 $contador = 1;
@@ -19,7 +20,7 @@ while ($argv[$contador] != 0) {
 }
 */
 
-$notaFilme = $somaDeNotas / $quantidadeDeNotas;
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
