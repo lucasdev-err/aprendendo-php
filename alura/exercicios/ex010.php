@@ -4,6 +4,28 @@
 
 <?php 
 
+$notas = [10, 2, 4, 6, 8, 9, 2, 10];
+
+// SOLUCAO UTILIZANDO for
+
+// for ($i = 0 ; $i < count($notas); $i++){
+//     if ($notas[$i] >= 6){
+//         echo "Parabens, aprovado com $notas[$i] pontos\n";
+//     } else {
+//         echo "Infelizmente, $notas[$i] pontos nao aprova\n";
+//     }
+// }
+
+
+// SOLUCAO UTILIZANDO foreach
+
+foreach ($notas as $nota) {
+    if ($nota >= 6){
+        echo "Voce foi aprovado com {$nota} pontos.\n";
+    } else{
+        echo "Voce reprovou com {$nota} pontos.\n";
+    }
+}
 
 
 ?>
