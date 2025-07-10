@@ -2,6 +2,12 @@
 
 <?php 
 
+$nomes = ["Lucas", "Maria", "Sandro", "Nilian"];
 
+// $nomes[] = "Judith"; // --> Esse metodo e mais pratico porem adiciona apenas 1 item no fim da lista.
+
+array_push($nomes, "Judith", "Alvaro");
+
+var_dump($nomes);
 
 ?>
