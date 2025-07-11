@@ -2,6 +2,11 @@
 
 <?php 
 
+$conta = [
+    "titular" => "Lucas",
+    "saldo" => 10000000.00
+];
 
+echo "{$conta['titular']} possui {$conta['saldo']} reais de saldo.";
 
 ?>
