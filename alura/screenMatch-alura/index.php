@@ -1,6 +1,8 @@
 <?php 
 
-function exibeMensagemLancamento($ano) {
+
+
+function exibeMensagemLancamento(int $ano): void {
 if ($ano > 2023) {
     echo "Esse filme e um lancamento\n";
     } elseif($ano > 2020 && $ano <= 2023) {
@@ -10,7 +12,7 @@ if ($ano > 2023) {
     }
 }
 
-function incluidoNoPlano($planoPrime, $anoLancamento) {
+function incluidoNoPlano(bool $planoPrime, int $anoLancamento): bool {
     return $planoPrime || $anoLancamento < 2020;
 }
 
