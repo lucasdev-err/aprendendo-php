@@ -1,4 +1,19 @@
 <?php 
+
+function exibeMensagemLancamento($ano) {
+if ($ano > 2023) {
+    echo "Esse filme e um lancamento\n";
+    } elseif($ano > 2020 && $ano <= 2023) {
+        echo "Esse filme ainda e novo\n";
+    } else {
+        echo "Esse filme nao e um lancamento\n";
+    }
+}
+
+function incluidoNoPlano($planoPrime, $anoLancamento) {
+    return $planoPrime || $anoLancamento < 2020;
+}
+
 echo "Bem-vindo(a) ao Screen Match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
@@ -23,20 +38,13 @@ while ($argv[$contador] != 0) {
 $notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
-$incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
+$incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
 echo "Nome do filme: $nomeFilme
 Ano Lancamento: $anoLancamento
-Nota do filme: $notaFilme
-Esta incluso no plano: $incluidoNoPlano\n";
+Nota do filme: $notaFilme\n";
 
-if ($anoLancamento > 2023) {
-    echo "Esse filme e um lancamento\n";
-} elseif($anoLancamento > 2020 && $anoLancamento <= 2023) {
-    echo "Esse filme ainda e novo\n";
-} else {
-    echo "Esse filme nao e um lancamento\n";
-}
+exibeMensagemLancamento($anoLancamento);
 
 $genero = match ($nomeFilme) {
     "Top Gun - Maverick" => "acao",
@@ -54,6 +62,6 @@ $filme = [
     "genero" => "super-heroi"
 ];
 
-echo $filme["nome"];
+echo $filme["ano"];
 
 ?>
