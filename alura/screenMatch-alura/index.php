@@ -1,7 +1,4 @@
 <?php 
-
-
-
 function exibeMensagemLancamento(int $ano): void {
 if ($ano > 2023) {
     echo "Esse filme e um lancamento\n";
@@ -67,13 +64,15 @@ $filme = [
 echo $filme["ano"];
 
 var_dump($notas);
-
 sort($notas);
-
 var_dump($notas);
-
 $menorNota = min($notas);
+var_dump($menorNota);
 
-echo $menorNota;
+var_dump($filme['nome']);
+$posicaoDoisPontos = strpos($filme['nome'], ":");
+var_dump($posicaoDoisPontos);
+
+var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
 
 ?>
