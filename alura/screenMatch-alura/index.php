@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ . "/functions.php";
+require __DIR__ . "/src/functions.php";
 
 echo "Bem-vindo(a) ao Screen Match!\n";
 
@@ -14,14 +14,6 @@ $notas = [];
 for ($i = 1; $i <= $quantidadeDeNotas; $i++) { 
     $notas[] = (float) $argv[$i];
 }
-
-
-/* 
-$contador = 1;
-while ($argv[$contador] != 0) {
-    $somaDeNotas += $argv[$contador++];
-}
-*/
 
 $notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
@@ -43,12 +35,12 @@ $genero = match ($nomeFilme) {
 
 echo "O genero do filme e $genero\n";
 
-$filme = [
-    "nome" => "Thor: Ragnarok",
-    "ano" => 2021,
-    "nota" => 7.8,
-    "genero" => "super-heroi"
-];
+$filme = criaFilme(
+    nome: "Thor: Ragnarok", 
+    nota: 7.8, 
+    anoLancamento: 2021, 
+    genero: "super-heroi"
+);
 
 echo $filme["ano"];
 
