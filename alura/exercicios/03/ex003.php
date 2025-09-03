@@ -27,5 +27,9 @@ class Conta
         }
     }
 
+    public function consultarSaldo() : int {
+        return $this->saldoEmCentavos;
+    }
+
 }
 ?>
