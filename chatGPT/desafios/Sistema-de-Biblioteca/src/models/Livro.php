@@ -16,17 +16,17 @@ class Livro
         $this->disponivel = true;
     }
 
-    public function getId():string 
+    public function getId(): string 
     {
         return $this->id;
     }
 
-    public function isDisponivel():bool 
+    public function isDisponivel(): bool 
     {
         return $this->disponivel;
     }
 
-    public function emprestar():void 
+    public function emprestar(): void 
     {
         if (!$this->disponivel){
             throw new \RuntimeException("Livro ja esta emprestado!");
@@ -34,7 +34,7 @@ class Livro
         $this->disponivel = false;
     }
 
-    public function devolver():void 
+    public function devolver(): void 
     {
         if ($this->disponivel){
             throw new \RuntimeException("Livro ja esta disponivel!");

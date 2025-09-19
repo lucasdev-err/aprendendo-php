@@ -20,12 +20,12 @@ class Usuario
         return $this->id;
     }
     
-    public function podeEmprestar():bool 
+    public function podeEmprestar(): bool 
     {
         return count($this->livrosEmprestados) < $this->limite;
     }
 
-    public function registrarEmprestimo(string $livroId):void
+    public function registrarEmprestimo(string $livroId): void
     {
         if(!$this->podeEmprestar()){
             throw new \RuntimeException("Limite atingido!");
@@ -33,7 +33,7 @@ class Usuario
         $this->livrosEmprestados[] = $livroId;
     }
 
-    public function registrarDevolucao(string $livroId):void
+    public function registrarDevolucao(string $livroId): void
     {
         unset($this->livrosEmprestados[$livroId]);
     }
