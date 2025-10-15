@@ -1,4 +1,5 @@
 <?php
+namespace ScreenMatch\models;
 
 interface Avaliavel
 {

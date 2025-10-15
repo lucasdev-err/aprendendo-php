@@ -1,4 +1,7 @@
-<?php 
+<?php
+namespace ScreenMatch\services;
+
+use ScreenMatch\models\Titulo;
 
 class CalculadoraDeMaratona
 {

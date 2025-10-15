@@ -1,4 +1,7 @@
 <?php
+namespace ScreenMatch\services;
+
+use ScreenMatch\models\Avaliavel;
 
 class ConversorNotaEstrela
 {

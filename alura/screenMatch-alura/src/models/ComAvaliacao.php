@@ -1,9 +1,14 @@
 <?php
 namespace ScreenMatch\models;
 
-class Episodio implements Avaliavel
+trait ComAvaliacao
 {
-    use ComAvaliacao;
+    private array $notas = [];
+    public function avalia(float $nota): void
+    {
+        $this->notas[] = $nota;
+    }
+
     public function media(): float
     {
         $somaNotas = array_sum($this->notas);
