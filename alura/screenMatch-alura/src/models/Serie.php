@@ -19,5 +19,3 @@ class Serie extends Titulo
         return $this->temporadas * $this->episodiosPorTemporada * $this->minutosPorEpisodio;
     }
 }
-
-?>
